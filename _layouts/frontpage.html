@@ -6,7 +6,12 @@
 		
 		  <div class="container">
 			<main>
-  			{% include slideshow.html %}
+  			
+  			{% if page.url contains 'page' %} 
+          {% comment %}Do nothing - this is hacky way to ignore paginator pages appearing in menu {% endcomment %}
+        {% else %}
+        {% include slideshow.html %}
+        {% endif %}
 				<section class="ten columns blog">
 					<div class="page-content">
 						
