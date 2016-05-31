@@ -1,13 +1,13 @@
-<footer class="site-footer">
+<footer class="site-footer sixteen columns">
 
-  <div class="wrapper">
+<!--   <div class="wrapper"> -->
 
     <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>{{ site.title }}</li>
+          <li>Ota yhteyttä:</li>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
       </div>
@@ -20,6 +20,12 @@
           </li>
           {% endif %}
 
+          {% if site.instagram_username %}
+          <li>
+            {% include icon-instagram.html username=site.instagram_username %}
+          </li>
+           {% endif %}
+          
           {% if site.twitter_username %}
           <li>
             {% include icon-twitter.html username=site.twitter_username %}
@@ -33,6 +39,23 @@
       </div>
     </div>
 
-  </div>
-
+<!--   </div> -->
+<!--
+  footer class="container">
+    <div class="sixteen columns">
+      <nav role="navigation">
+        <ul>
+          <% for page in @getCollection("pages").toJSON(): %>
+            <li class="<%= if page.id is @document.id then 'selected' else 'inactive' %>">
+                <a href="<%= page.url %>">
+                    <%= page.title %>
+                </a>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+      <p>Copyright &copy; 2015 Liikuntapalvelut Liikevoima Oy. All rights reserved.</p>
+    </div>
+  </footer>
+  -->
 </footer>

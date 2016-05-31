@@ -1,0 +1,56 @@
+    <header>
+
+        <h1>
+            <a href="/" class="{% if page.url == '/index.html' %}current{% endif %}">Top part of the page body</a>
+        </h1>
+
+        <nav>
+            <!--
+                XXX Liquid doesn't have a notion of array literals it seems.
+                We could construct one for our nav by splitting a string, but
+                GitHub's unfortunately on an older version of Liquid w/out it.
+                Argh. So until then, manually duplicating markup below...
+                TODO FIXME Make this into an array once GitHub updates Liquid!
+                Test: (GitHub's version also doesn't support "raw" Liquid)
+                << 'About~Blog~Music~Projects~Teaching' | split:'~' | join:',' >>
+                 ==>
+                {{ 'About~Blog~Music~Projects~Teaching' | split:'~' | join:',' }}
+            -->
+
+            <!--
+                XXX FIXME super hacky: liquid contains no startsWith() or
+                similar, and contains() isn't what we want, so we mimic our
+                own by using a unique string...
+            -->
+            {% capture paddedURL %}BEGIN{{ page.url }}END{% endcapture %}
+
+            <!--
+                XXX FIXME Also note that GitHub's Liquid doesn't support
+                assign-ing the output of a filter! Gotta use capture. Argh^2!
+                Using assign:
+                {% assign aboutMatch = paddedURL | replace_first:'/about/','MATCH' %}
+                {{ aboutMatch }}
+                Using capture:
+                {% capture aboutMatch %}{{ paddedURL | replace_first:'/about/','MATCH' }}{% endcapture %}
+                {{ aboutMatch }}
+            -->
+
+            <!-- Important: no newlines after opening <a> and content — messes w/ layout! -->
+
+            {% capture aboutMatch %}{{ paddedURL | replace_first:'/about/','MATCH' }}{% endcapture %}
+            <a href="/about/" class="{% if aboutMatch contains 'BEGINMATCH' %}current{% endif %}">About</a>
+
+            {% capture blogMatch %}{{ paddedURL | replace_first:'/blog/','MATCH' }}{% endcapture %}
+            <a href="/blog/" class="{% if blogMatch contains 'BEGINMATCH' %}current{% endif %}">Blog</a>
+
+            {% capture musicMatch %}{{ paddedURL | replace_first:'/music/','MATCH' }}{% endcapture %}
+            <a href="/music/" class="{% if musicMatch contains 'BEGINMATCH' %}current{% endif %}">Music</a>
+
+            {% capture projectsMatch %}{{ paddedURL | replace_first:'/projects/','MATCH' }}{% endcapture %}
+            <a href="/projects/" class="{% if projectsMatch contains 'BEGINMATCH' %}current{% endif %}">Projects</a>
+
+            {% capture teachingMatch %}{{ paddedURL | replace_first:'/teaching/','MATCH' }}{% endcapture %}
+            <a href="/teaching/" class="{% if teachingMatch contains 'BEGINMATCH' %}current{% endif %}">Teaching</a>
+        </nav>
+
+    </header>

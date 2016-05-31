@@ -1,0 +1,53 @@
+---
+title: "Tuntivaraus"
+layout: default
+---
+
+       <!--onload="this.style.visibility='visible'; $('#avoinna24').css('height', $(window).height()+'px');"-->
+
+        <section class="sixteen columns">
+            <article id="main">
+                <header>
+                <p>Tuntivarausj&auml;rjestelm&auml;mme toimii Avoinna24.fi -palvelussa, varaamista varten tarvitset sivulle tunnuksen, joka luodaan ensimmmäisen varaustapahtuman yhteydess&auml;.
+                </p>
+                </header>
+                <div class="iframecontainer">
+                    <iframe id="avoinna24"
+                    onload="this.style.visibility='visible'; $('#avoinna24').css('height', $(window).height()+'px');"
+                    src="https://liikevoima.avoinna24.fi/company/iframe?branch_id=955bf488-5470-11e4-9542-d3202a33aa3e&service_group_id=1ee6f61c-5507-11e4-80b3-13158f3a9203"
+                    FrameBorder="0">
+                    </iframe>
+                </div>
+            </article>
+
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script type="text/javascript">
+                if (typeof jQuery == 'undefined') {
+                    console.log("jquery not defined");
+                    document.write(unescape("%3Cscript src='/vendor/jquery-1.11.3.min.js'%3E%3C/script%3E"));
+                }
+            </script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    if($(window).width() < 481)
+                          $('#avoinna24').attr("src","https://liikevoima.avoinna24.fi/m/company/iframe?branch_id=955bf488-5470-11e4-9542-d3202a33aa3e&service_group_id=1ee6f61c-5507-11e4-80b3-13158f3a9203");
+                    else
+                        $('#avoinna24').attr("src","https://liikevoima.avoinna24.fi/company/iframe?branch_id=955bf488-5470-11e4-9542-d3202a33aa3e&service_group_id=1ee6f61c-5507-11e4-80b3-13158f3a9203");
+
+                    $('.menu.dropdown ul li').click(function () {
+                        $(this).find('ul').toggle();
+                    });
+
+                });
+
+               /* $(window).resize(function() {
+                    if($(window).width() < 481)
+                          $('#avoinna24').attr("src","https://liikevoima.avoinna24.fi/m/company/iframe?branch_id=955bf488-5470-11e4-9542-d3202a33aa3e&service_group_id=1ee6f61c-5507-11e4-80b3-13158f3a9203");
+                    else
+                        $('#avoinna24').attr("src","https://liikevoima.avoinna24.fi/company/iframe?branch_id=955bf488-5470-11e4-9542-d3202a33aa3e&service_group_id=1ee6f61c-5507-11e4-80b3-13158f3a9203");
+                });
+
+                */
+            </script>
+
+        </section>

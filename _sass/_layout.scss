@@ -6,6 +6,20 @@
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
+	// BEGIN -vu
+	color: #bfbfbf;
+	padding-top: 1px;
+	margin-top: -1px;
+	background-color: #515151; /* Old browsers */
+	background-image: -moz-linear-gradient(top, #515151 0%, #0d0d0d 100%); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#515151), color-stop(100%,#0d0d0d)); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top, #515151 0%,#0d0d0d 100%); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top, #515151 0%,#0d0d0d 100%); /* Opera 11.10+ */
+	background-image: -ms-linear-gradient(top, #515151 0%,#0d0d0d 100%); /* IE10+ */
+	background-image: linear-gradient(top, #515151 0%,#0d0d0d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#515151', endColorstr='#0d0d0d',GradientType=0 ); /* IE6-9 */
+	// END -vu
+	
     // Positioning context for the mobile navigation icon
     position: relative;
 }
@@ -28,20 +42,46 @@
     float: right;
     line-height: 56px;
 
+    a {    
+      padding: 3px 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      &:hover {
+          color: white;
+          text-decoration: none;
+      }
+    }
+    
     .menu-icon {
         display: none;
     }
 
     .page-link {
-        color: $text-color;
+        //color: $inverted-title-text-color;
+        color: lightgray;
+        font-size: larger;
         line-height: $base-line-height;
-
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 20px;
         }
     }
 
+    .selected {
+          
+          background-color: white;
+          color: black;
+          /*  -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;*/
+          &:hover {
+            color: black;
+          }
+    }
+      
+          
+          
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
@@ -73,6 +113,7 @@
         .trigger {
             clear: both;
             display: none;
+            
         }
 
         &:hover .trigger {
@@ -100,6 +141,52 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+   
+    p#copy {
+    color: #888;
+    font-style: italic;
+    } 
+    
+    p#copy a.external {
+      /* hide the text: */
+      color: transparent;
+      overflow: hidden;
+      text-indent: 99em;
+  
+      /* use a background-image instead: */
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background: transparent no-repeat left center;
+      background-size: contain;
+  
+      /* and add some breathing room, but still a hit target: */
+      /* (see below for first-of-type adjustment) */
+      background-clip: padding-box;
+      border: solid transparent;
+      border-width: 0 0.33em;
+  
+      /* show them at partial opacity until hover (below): */
+      opacity: 0.5;
+    }
+
+    p#copy a.external:hover {
+        opacity: 1.0;
+    }
+    
+    p#copy a.external:first-of-type {
+        margin-left: 0.33em;
+    }
+    
+    p#copy a.twitter {
+        background-image: url(/images/twitter/bird_blue_16.png);
+    }
+    
+    p#copy a.feed {
+        background-image: url(/images/feed/feed-icon-14x14.png);
+    }
+
+
 }
 
 .footer-heading {
@@ -175,6 +262,47 @@
     font-size: 20px;
 }
 
+
+main article {
+  margin-top: 1em;
+  h1  {
+    font-weight: bold;
+  }
+  address {
+  font-style: normal;
+    > a {
+      font-weight: bold;
+    }
+  }
+
+  &.left, &.right   {
+    width: 49%; 
+    float: left;
+    font-size: large;
+  }
+  &.right {
+  float: right;
+  }
+
+  h2 {
+    font-size: large;
+    font-weight: bold;
+    color: $brand-color;
+  }
+
+}
+
+ul li {
+  list-style-type: none;
+  list-style-image: none;
+  strong {
+  color: rgba(4,90,122,1.00);
+  font-size: medium;
+  }
+}
+/**
+ * Posts
+ */
 .post-list {
     margin-left: 0;
     list-style: none;
@@ -187,6 +315,12 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    text-align: right;
+}
+
+p.post-meta {
+    padding: 0;
+    margin: 0;
 }
 
 .post-link {
@@ -196,29 +330,40 @@
 
 
 
-/**
- * Posts
- */
 .post-header {
-    margin-bottom: $spacing-unit;
+    //margin-bottom: $spacing-unit;
+    margin-bottom: none;
+    //padding-left: $spacing-unit / 2;  
+    // move text a bit further from grey border
+    padding-bottom: 0;
 }
 
 .post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
+//     letter-spacing: -1px;
+    line-height: 1.2;
+    background-color: /*#ff6600*/ #F29224;
+    padding: 0.3em 0.6em;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-radius: 4px;    
+    
+    font-size: x-large;
+    font-weight: normal;
+  
+    color: snow;
+    
     @include media-query($on-laptop) {
         font-size: 36px;
     }
 }
 
-.post-content {
-    margin-bottom: $spacing-unit;
 
+.post-content {
+  margin-bottom: $spacing-unit / 2;
+	padding-left: $spacing-unit / 2; // move text a bit further from grey border
     h2 {
         font-size: 32px;
-
         @include media-query($on-laptop) {
             font-size: 28px;
         }
@@ -240,3 +385,106 @@
         }
     }
 }
+
+/*
+.witharticles {
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-bottom-left-radius: 8px;
+}
+*/
+
+/* Create a gray outline on left and bottom border of each blog post */
+article.post {
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-bottom-left-radius: 8px; 
+  margin-bottom: $spacing-unit;
+}
+
+.stats {
+  display: inline-block;
+  font-size: smaller;
+  margin-left: 1em;
+  color: $grey-color;
+//   border: 1px solid #96aa0e;
+}
+
+// "Continue reading" -links 
+div.continue, div.buttons {
+  float:right;
+}
+
+div.buttons > * {
+    display: inline-block;
+    height: 24px;
+    vertical-align: bottom !important;  /* override generated inline styles... */
+}
+
+div#comments {
+    clear: left;
+    margin: 1em 0;
+    /* TODO min-height for an accurate layout sooner? */
+}
+
+/* for Facebook comments, override/customize styles as needed: */
+div.fb-comments {
+    display: block;
+}
+div.fb-comments span, div.fb-comments iframe {
+    width: 100% !important;
+}
+
+.logo h3 {
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  position: relative;
+  color: rgba(9,7,8,1.00);
+  text-transform: uppercase;
+  font-size: 100%;
+  left: 0%;
+  float: left;
+  top: 83%;
+  padding-top: 4px;
+  > a {
+    color: #FEFEFE;
+    font-weight: normal;
+    text-decoration: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Helvetica, Arial, sans-serif;
+    font-size: x-large;
+    
+    &:visited  {
+      font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    }
+  }
+}
+
+
+/* */
+#avoinna24 {
+  width: 100%;
+/*  visibility: hidden; */
+}
+
+slider-wrapper { margin-top: 0.2em;}
+
+//#slider { height: 320px;}
+ 
+ #fbblock {
+  font-size: smaller;
+  font-family: "Calibri";
+  font-weight: 400;
+  color: #3b5998;
+  border-radius: 6px;
+}
+
+#fb-page {
+  font-family: "Calibri";
+  font-weight: bold;
+  color: #3b5998;
+  border-radius: 6px;
+}
+ 

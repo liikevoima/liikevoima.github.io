@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+		{% include header.html %}
+		
+		  <div class="container">
+			<main>
+  			{% include slideshow.html %}
+				<section class="ten columns blog">
+					<div class="page-content">
+						
+							{{ content }}
+		
+					</div>
+				</section>
+			</main>
+			{% include fbnews.html %}
+			{% include footer.html %}
+		</div>
+	</body>
+</html>

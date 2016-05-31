@@ -1,0 +1,488 @@
+@charset "utf-8";
+body {
+  margin: 0px;
+  color: #151515;
+  font-family: "Calibri", "Gill Sans", "Gill Sans MT", "Myriad Pro", Helvetica, Arial, sans-serif;
+  background-color: #FEFEFE;
+}
+
+.logoimage {
+  width: 960px;
+  height: 152px;
+  background: url(images/Logo_valk-oranssi_eireunoja_transp_copy.png) no-repeat;
+  background-position: left center;
+}
+
+#logo {
+    padding-top: 0.2em;
+}
+
+<!-- #wrapper {
+  width: 100%;
+  min-width: 740px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFFF;
+} -->
+#top {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+h1 ,h2 {
+  color: #FF6600;
+  font-family: "Calibri", "Gill Sans", "Gill Sans MT", "Myriad Pro", Helvetica, Arial, sans-serif;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+/*h1 {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-indent: 12px;
+}
+*/
+#main {
+  width: 100%;
+  float: left;
+}
+
+
+figure {
+  display: block;
+  width: auto;
+}
+figure img {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  -webkit-box-shadow: 1px 1px 15px #999999;
+  box-shadow: 1px 1px 15px #999999;
+  padding-top: 0px;
+}
+
+figcaption {
+  font-size: 0.875em;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-top: 0.5em;
+}
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+.floatleft {
+  float: left;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+.floatright {
+  float: right;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+footer {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 3%;
+  background-color: #FEFEFE;
+  color: #000000;
+  clear: left;
+}
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+a:link {
+  color: #FF6600;
+}
+a:visited {
+  color: #FF944C;
+
+}
+a:hover, a:active, a:focus {
+  color: #3b5998;
+  text-decoration: underline;
+}
+#mainnav ul {
+  list-style-type: none;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+#mainnav a {
+  width: 25%;
+  display: block;
+  float: left;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #4D4D4D;
+  color: #FFFFFF;
+  clear: none;
+}
+#mainnav a:hover, #mainnav a:focus ,#mainnav a:active ,#mainnav a.thispage{
+  background-color: #43A6CB;
+  text-decoration: none;
+}
+#ct {
+  width: 30%;
+  float: left;
+}
+#ryhmaliikunta {
+  width: 30%;
+  float: left;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+#kuntosali {
+  float: left;
+  width: 30%;
+}
+#main figure img {
+  padding: none;
+  width: 80%;
+}
+/*#sali article {
+  width: 36%;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  color: #FFFFFF;
+  background-color: hsla(32,90%,55%,1.00);
+  border-radius: 17px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  top: 46%;
+  right: 19%;
+}*/
+
+#sali header {
+  width: 24%;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  color: #FFFFFF;
+  background-color: #F29224;
+  border-radius: 17px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  top: 2%;
+  right: 8%;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Calibri", "Gill Sans", "Gill Sans MT", "Myriad Pro",  Helvetica, Arial, sans-serif;
+  z-index: 10;
+}
+
+#sali img {
+  max-width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+#sali {
+  position: relative;
+}
+
+h1.blog {
+  /*display: inline;*/
+  color: snow;
+  background-color: /*#ff6600*/ #F29224;
+  font-size: x-large;
+  font-weight: bold;
+  padding-left: 1em;
+  border-radius: 4px;
+}
+
+/*
+ * Date shown in a blog post list header
+ */
+.blog date {
+  color: snow;
+  float: right;
+  text-align: right;
+  padding-right: 10px;
+  font-size: small;
+}
+
+div.post_with_bg_img {
+  background-image: url(/images/IMG_0188_1kx1k_sepia.png);
+  position: relative;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.news article header {
+  /*position: absolute;*/
+  z-index: auto;
+  text-align: center;
+  border-radius: 15px;
+  text-shadow: 0px 0px;
+  color: rgba(254,254,254,1.00);
+}
+
+.news article header h1  {
+  text-shadow: 0px 0px;
+  background-color: rgba(0,0,0,0.00);
+  font-weight: bold;
+  color: rgba(254,254,254,1.00);
+  font-size: xx-large;
+}
+
+/* headers inside blog posts: */
+article > header > h1 {
+  font-size: x-large;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  text-align: left;
+  font-weight: bold;
+  color: #3b5998;
+}
+
+.witharticles {
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-bottom-left-radius: 8px;
+}
+
+/* handler for single blog post content */
+main>div.internal {
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-bottom-left-radius: 8px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+
+article.ad {
+  margin-top: 20px;
+  padding-left: 1em;
+  margin-bottom: 8px;
+}
+
+article.ad2 {
+  margin: 10 40 10;
+  margin-left: 2em;
+  background-color: hsla(0,0%,0%,0.31);
+  border-radius: 6px;
+  color: snow;
+  font-weight:900;
+}
+
+.ad2 h2 {
+    color: snow;
+}
+
+/*  hsla(32, 89%, 55%,1.00); = himme&auml; oranssi */
+
+article.ad h2 {
+  /*position: absolute;*/
+  padding-top: 8px;
+/*  color: hsla(32, 89%, 55%,1.00);*/
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Helvetica, Arial, sans-serif;
+/*  text-align: center;*/
+  font-weight: 900;
+}
+
+article.ad p, ul {
+  color: /*hsla(0,0%,100%,1.00); */  black;
+  text-align: left;
+  font-size: large;
+}
+
+.readmore {
+  text-align: right;
+  margin-top: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: large;
+/*    border: 1px solid black;*/
+}
+
+.readmore a {
+    color: #3b5998;
+}
+
+ul {
+  margin: 0;
+}
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -5px;
+}
+ul.dashed > li:before {
+  content: "\2014\00a0";
+  text-indent: -5px;
+}
+
+
+
+.ad ul > li {
+  color: #151515; list-style: none;
+}
+
+article.ad p > strong {
+  padding-left: 6px;
+  /*color: hsla(0,0%,100%,1.00);*/
+  color: #3b5998;
+  text-align: left;
+  font-size: large;
+  padding-right: 6px;
+}
+.smaller {
+  font-weight: normal;
+}
+
+#sidebar {
+  width: 30%;
+  float: right;
+  background-color: hsla(0,0%,100%,1.00);
+  color: hsla(0,0%,100%,1.00);
+  padding-left: 1%;
+  padding-right: 1%;
+}
+#sidebar h2 a {
+  color: hsla(0,0%,100%,1.00);
+  font-size: small;
+}
+#sidebar h1 a {
+  color: hsla(0,0%,100%,1.00);
+  font-size: small;
+}
+#sidebar #fbdataheader  {
+  top: 1em;
+  float: left;
+}
+
+#sidebar.fb-like {
+    border: none;
+}
+
+
+.news .meta  {
+  padding-left: 0px;
+  color: rgba(0,0,0,1.00);
+  float: left;
+}
+.retard {
+  border-color: rgba(238,21,21,1.00);
+}
+ul li strong {
+  color: rgba(4,90,122,1.00);
+  font-size: medium;
+}
+.sixteen.columns article p  {
+  text-indent: 0px;
+  margin-left: 29px;
+  margin-top: 11px;
+  width: 80%;
+}
+#hinnat ul li strong  {
+  color: rgba(0,0,0,1.00);
+}
+#hinnat ul li {
+  font-size: large;
+}
+
+#main div #avoinna24 {
+  width: 100%;
+/*  visibility: hidden; */
+}
+#main header {
+  font-size: large;
+  font-style: normal;
+  padding-top: 0%;
+  padding-right: 0%;
+  padding-left: 0%;
+  padding-bottom: 0%;
+  margin-top: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  font-weight: normal;
+}
+main article.left   {
+  width: 49%;
+  float: left;
+  font-size: large;
+}
+main article.right   {
+  width: 49%;
+  float: right;
+  font-size: large;
+}
+.ajankohtaista {
+  position: absolute;
+  background-color: rgba(242,146,36,0.77);
+  border-radius: 17px;
+  right: 8%;
+  width: 24%;
+}
+.ajankohtaista h2  {
+  color: rgba(254,254,254,1.00);
+}
+.ajankohtaista h3 > a {
+  color: rgba(254,254,254,1.00);
+}
+
+address {
+  margin-bottom: 10px;
+}
+article > table {
+  margin-bottom: 1em;
+}
+td.time  {
+  font-weight: bold;
+}
+p.time {
+  padding-top: 32px;
+}
+
+/*
+ @media only screen and (max-width: 480px) {
+   .avoinna24url {
+     content:url("https://liikevoima.avoinna24.fi/m/company/iframe?branch_id=955bf488-5470-11e4-9542-d3202a33aa3e&service_group_id=1ee6f61c-5507-11e4-80b3-13158f3a9203");
+   }
+ }
+ @media only screen and (min-width: 481px) {
+   .avoinna24url {
+     content:url("https://liikevoima.avoinna24.fi/company/iframe?branch_id=955bf488-5470-11e4-9542-d3202a33aa3e&service_group_id=1ee6f61c-5507-11e4-80b3-13158f3a9203");
+   }
+ }*/
+ main .iframecontainer {
+  -webkit-overflow-scrolling: touch !important;
+/*  overflow-y: scroll !important;*/
+  overflow: hidden;
+   height=99.5% ;
+}
+
+#fbblock {
+  font-size: smaller;
+  font-weight: 400;
+  color: #3b5998;
+  border-radius: 6px;
+}
+
+.ffront {
+  margin-left: 1.1em;
+  margin-top: 1em;
+}
+
+slider-wrapper { margin-top: 0.2em;}
+
+#slider { height: 320px;}
