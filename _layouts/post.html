@@ -20,15 +20,13 @@ og_type: article
         {% capture postURL %}{{ page.url | remove:'.html' }}{% endcapture %}
         {% capture postURLAbs %}{{ site.url }}{{ postURL }}{% endcapture %}
         {% capture postURLAbsEsc %}{{ postURLAbs | escape }}{% endcapture %}
-
-        <h2>
-            <a class="current" href="{{ postURL | escape }}">
-                {{ page.title | escape }}</a>
-
+        <header>
+        <h1>
+            <a href="{{ postURL | escape }}">{{ page.title | escape }}</a>
             <time pubdate datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" }}</time>
-
             <!-- TODO categories? -->
-        </h2>
+        </h1>
+        </header>
 
         <!-- important: don't escape content! it'll actually be HTML markup. -->
         {{ content }}

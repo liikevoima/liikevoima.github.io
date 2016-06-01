@@ -19,9 +19,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://liikevoima.github.io" # the base hostname & protocol for your site
 twitter_username: liikevoima
 instagram_username: liikevoima
-github_username:
-
-
+facebook_username: liikevoimaoy
 paginate: 5
 paginate_path: "/page:num/"
 

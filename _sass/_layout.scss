@@ -214,18 +214,18 @@
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
     width:         calc(20% - (#{$spacing-unit} / 2));
 }
 
+.footer-col-2 {
+    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+    width:         calc(30% - (#{$spacing-unit} / 2));
+}
+
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    width:         calc(50% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
@@ -267,6 +267,17 @@ main article {
   margin-top: 1em;
   h1  {
     font-weight: bold;
+    padding-right: 50px;
+     time {
+      float: right;
+      font-size: smaller;
+      font-weight: lighter;
+      color: #888;
+
+      /* XXX FIXME can't figure out how to align to baseline; hack: */
+//       position: relative;
+//       bottom: -0.75em;
+    }
   }
   address {
   font-style: normal;
@@ -288,6 +299,7 @@ main article {
     font-size: large;
     font-weight: bold;
     color: $brand-color;
+
   }
 
 }
@@ -386,6 +398,15 @@ p.post-meta {
     }
 }
 
+.page_number {
+   font-size: smaller;
+    font-weight: lighter;
+    color: #888;
+}
+
+.pagination {
+  float: left;
+}
 /*
 .witharticles {
   border-left: 1px solid #ddd;
