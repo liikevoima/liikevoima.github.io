@@ -2,19 +2,18 @@
 
 <!--   <div class="wrapper"> -->
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+<!--     <h2 class="footer-heading"><{{ site.title }}</h2> -->
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
+          <li>&nbsp;</li>
           <li>Ota yhteyttä:</li>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
+        
         <ul class="social-media-list">
-          <li>Liikevoima somessa:</li>
+         
           {% if site.facebook_username %}
           <li>
             {% include icon-facebook.html username=site.facebook_username %}
@@ -24,38 +23,31 @@
           <li>
             {% include icon-instagram.html username=site.instagram_username %}
           </li>
-           {% endif %}
-          
+          {% endif %}    
           {% if site.twitter_username %}
           <li>
             {% include icon-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
-        </ul>
+        </ul>  
       </div>
-
+      <div class="footer-col footer-col-2">
+        <p>&nbsp;</p><p>&nbsp;</p>
+      </div>
+      
       <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+        <div class="bottom-aligner"></div>
+        <div class="bottom-content">
+          <p>{{ site.description }}</p>
+        </div>
+    
       </div>
+      
     </div>
-
+        
+    <p class="footer-footer">Copyright &copy; 2016 Liikuntapalvelut Liikevoima Oy</p>
+      
 <!--   </div> -->
-<!--
-  footer class="container">
-    <div class="sixteen columns">
-      <nav role="navigation">
-        <ul>
-          <% for page in @getCollection("pages").toJSON(): %>
-            <li class="<%= if page.id is @document.id then 'selected' else 'inactive' %>">
-                <a href="<%= page.url %>">
-                    <%= page.title %>
-                </a>
-            </li>
-          <% end %>
-        </ul>
-      </nav>
-      <p>Copyright &copy; 2015 Liikuntapalvelut Liikevoima Oy. All rights reserved.</p>
-    </div>
-  </footer>
-  -->
+<!-- <div class="two columns site-footer2"></div> -->
+
 </footer>

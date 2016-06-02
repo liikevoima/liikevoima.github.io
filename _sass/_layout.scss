@@ -133,100 +133,134 @@
     }
 }
 
-
-
 /**
  * Site footer
  */
-.site-footer {
-    border-top: 1px solid $grey-color-light;
+.site-footer {   
+  border-top: 2px solid lightgray;       
     padding: $spacing-unit 0;
-   
+    padding-top: 0;
     p#copy {
-    color: #888;
-    font-style: italic;
-    } 
-    
-    p#copy a.external {
-      /* hide the text: */
-      color: transparent;
-      overflow: hidden;
-      text-indent: 99em;
-  
-      /* use a background-image instead: */
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      background: transparent no-repeat left center;
-      background-size: contain;
-  
-      /* and add some breathing room, but still a hit target: */
-      /* (see below for first-of-type adjustment) */
-      background-clip: padding-box;
-      border: solid transparent;
-      border-width: 0 0.33em;
-  
-      /* show them at partial opacity until hover (below): */
-      opacity: 0.5;
+     color: #888;
+     font-style: italic;
     }
-
-    p#copy a.external:hover {
-        opacity: 1.0;
-    }
-    
-    p#copy a.external:first-of-type {
-        margin-left: 0.33em;
-    }
-    
-    p#copy a.twitter {
-        background-image: url(/images/twitter/bird_blue_16.png);
-    }
-    
-    p#copy a.feed {
-        background-image: url(/images/feed/feed-icon-14x14.png);
-    }
-
-
 }
 
 .footer-heading {
-    font-size: 18px;
     margin-bottom: $spacing-unit / 2;
+//     border: 1px solid blue;
+}
+
+.footer-footer {
+//   width: 80%;
+  border-top: 1px solid lightgray;
+    clear: both;
+    font-size: small;
+    color: lightgray;
+    padding-top: $spacing-unit / 2;
+ //   margin-top: -$spacing-unit;
+//     border: 1px solid yellow;
+    text-align: center;
 }
 
 .contact-list,
 .social-media-list {
     list-style: none;
     margin-left: 0;
+    margin: 0;
 }
 
+.social-media-list {
+  list-style-type: none;
+
+      li {
+        float: left;   
+        padding-top: $small-font-size;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 10;
+        margin: 0.3rem ;
+      }
+    
+}
 .footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
+  font-size: 15px;
+  height: 10px;
+  color: $grey-color;
+  margin-left: -$spacing-unit / 2;
+  @extend %clearfix;
+
 }
 
 .footer-col {
     float: left;
     margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;   
+//     border: 1px solid $brand-color;
 }
-
+    
 .footer-col-1 {
     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
     width:         calc(20% - (#{$spacing-unit} / 2));
-}
+    p {
+      font-size: 10px;
+    }
 
-.footer-col-2 {
-    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
-    width:         calc(30% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(65% - (#{$spacing-unit} / 2));
+    width:         calc(65% - (#{$spacing-unit} / 2));
+    position: relative;
+     
+     &:after {
+      content: "";
+      opacity: 0.8;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100px;
+//       border: 1px solid red;
+      position: absolute;
+      vertical-align: top;
+      z-index: -1;  
+      background-image: url('leima_v3.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+
+    }
+    p {
+      width: 80%;
+    }
 }
+
+.footer-col-2 {
+    width: -webkit-calc(10% - (#{$spacing-unit} / 2));
+    width:         calc(10% - (#{$spacing-unit} / 2));
+}
+
+/*
+div.footer-col-4 {
+    display: block;
+    position: relative;
+    border: 1px solid blue;
+    z-index: 0;
+    &:after {
+          vertical-align: top; 
+      content: "";
+      opacity: 0.3;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;  
+
+    }
+}
+*/
 
 @include media-query($on-laptop) {
     .footer-col-1,
@@ -249,7 +283,17 @@
     }
 }
 
+.bottom-aligner {
+  display: inline-block;
+  height: 100%;
+  vertical-align: bottom;
+  width: 40px;
 
+}
+
+.bottom-content {
+  display: inline-block;
+}
 
 /**
  * Page content
@@ -508,4 +552,47 @@ slider-wrapper { margin-top: 0.2em;}
   color: #3b5998;
   border-radius: 6px;
 }
- 
+
+.username {
+  display: none;
+}
+p#copy a.external {
+  /* hide the text: */
+  color: transparent;
+  overflow: hidden;
+  text-indent: 99em;
+
+  /* use a background-image instead: */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: transparent no-repeat left center;
+  background-size: contain;
+
+  /* and add some breathing room, but still a hit target: */
+  /* (see below for first-of-type adjustment) */
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0.33em;
+
+  /* show them at partial opacity until hover (below): */
+  opacity: 0.5;
+}
+
+p#copy a.external:hover {
+    opacity: 1.0;
+}
+
+p#copy a.external:first-of-type {
+    margin-left: 0.33em;
+}
+
+p#copy a.twitter {
+    background-image: url('hollow-cut-facebook.svg');
+    background-size: contain;
+}
+
+p#copy a.feed {
+    background-image: url(/images/feed/feed-icon-14x14.png);
+}
+
