@@ -322,6 +322,16 @@ main article {
 //       position: relative;
 //       bottom: -0.75em;
     }
+    > span {
+      float: right;
+      .name {
+        color: red;
+      }
+      .author {
+        color: red;
+      }
+
+    }
   }
   address {
   font-style: normal;
@@ -406,9 +416,21 @@ p.post-meta {
     
     font-size: x-large;
     font-weight: normal;
-  
-    color: snow;
     
+    color: snow;
+  
+    > time {
+      float: right;
+      font-size: medium;
+      font-weight: lighter;
+      color: snow;
+
+      /* XXX FIXME can't figure out how to align to baseline; hack: */
+      position: relative;
+      bottom: -0.5em;
+      margin-right: 0.5em;
+    }
+  
     @include media-query($on-laptop) {
         font-size: 36px;
     }
@@ -595,4 +617,11 @@ p#copy a.twitter {
 p#copy a.feed {
     background-image: url(/images/feed/feed-icon-14x14.png);
 }
+
+.gmap {
+  float: left;
+  margin: 1em 1em;
+  width: 80%;
+}
+
 

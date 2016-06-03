@@ -23,9 +23,15 @@ og_type: article
         <header>
         <h1>
             <a href="{{ postURL | escape }}">{{ page.title | escape }}</a>
-            <time pubdate datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" }}</time>
+            <time pubdate datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d.%m.%Y" }}</time>
             <!-- TODO categories? -->
+            {% if page.author %}
+             • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ page.author }}</span>
+            </span>{% endif %}
+
         </h1>
+
         </header>
 
         <!-- important: don't escape content! it'll actually be HTML markup. -->

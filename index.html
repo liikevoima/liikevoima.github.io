@@ -11,9 +11,12 @@ og_type: blog
   {% unless post.draft == true %}
   	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">{{ post.title | escape }}</h1>
+      <h1 class="post-title" itemprop="name headline">{{ post.title | escape }}
+        <time pubdate datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d.%m.%Y" }}</time>
+        
+      </h1>
       <p class="post-meta">
-	        <time pubdate datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+<!-- 	        <time pubdate datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time> -->
           {% if post.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
         <span itemprop="name">{{ post.author }}</span>
         </span>{% endif %}
