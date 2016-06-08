@@ -68,7 +68,7 @@ og_type: blog
             for (var i = 0; i < postURLs.length; i++) {
                 var num = objs[postURLs[i]].comments;
                 commentsCountSpans[i].innerHTML =
-                    num ? (num + " comment" + (num > 1 ? 's' : '')) : "No comments";
+                    num ? (num + " kommentti" + (num > 1 ? 'a' : '')) : "Ei kommentteja";
             }
         }
         // fetch the # of comments for each post as a single batch request:

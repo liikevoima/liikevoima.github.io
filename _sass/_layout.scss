@@ -1,6 +1,8 @@
 /**
  * Site header
  */
+ @import 'base.css';
+ 
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -312,27 +314,24 @@ main article {
   h1  {
     font-weight: bold;
     padding-right: 50px;
-     time {
+     time, >span {
       float: right;
       font-size: smaller;
       font-weight: lighter;
       color: #888;
-
+      margin-right: 0.2em;  
       /* XXX FIXME can't figure out how to align to baseline; hack: */
 //       position: relative;
 //       bottom: -0.75em;
     }
     > span {
-      float: right;
-      .name {
-        color: red;
+      clear: both;
+      color: gray;
+      
+      bottom: -0.5em;
       }
-      .author {
-        color: red;
-      }
-
-    }
   }
+  
   address {
   font-style: normal;
     > a {
