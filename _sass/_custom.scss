@@ -137,13 +137,14 @@ ul li {
   color: #3b5998;
   border-radius: 6px;
   h2 {
-    margin-top: 1.5em;
+//     margin-top: 1.5em;
     color: $brand-color_2;
     font-size: x-large;
     font-weight: bold;
   }
   p {
     color: $text-color;
+    font-size: medium;
   }
 }
 
