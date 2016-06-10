@@ -24,7 +24,6 @@ og_type: blog
     </header>
         <div class="post-content" itemprop="articleBody">
 	    {{ post.excerpt }}
-      </div>
 
       <div class="stats">
           <!-- This gets populated by script below -->
@@ -34,6 +33,7 @@ og_type: blog
   		<a class="post" href="{{ post.url | remove:'.html' | escape }}">
     			<div class="continue">Lue lis&auml;&auml; &rarr;</div>
     	</a>
+    	</div>
     				
 	    </article>
 	    {% endunless %}
@@ -57,7 +57,7 @@ og_type: blog
     <!-- TEMP HACK this whole thing feels quite hacky. wish there were easier ways. -->
     <script>
         // iterate over all the posts above and grab their (absolute) URLs:
-        var posts = document.querySelectorAll('article > a.post');
+        var posts = document.querySelectorAll('article a.post');
         var postURLs = [];
         for (var i = 0; i < posts.length; i++) {
             postURLs.push('{{ site.url }}' + posts[i].getAttribute('href'));

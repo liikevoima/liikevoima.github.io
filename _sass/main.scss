@@ -1,8 +1,7 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@charset "utf-8";
-
+// ---
+// # Only the main Sass file needs front matter (the dashes are enough)
+// ---
+// @charset "utf-8";
 
 
 // Our variables
@@ -14,12 +13,14 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #1f1f1f;
 
-$inverted-title-text-color: #F29224;
+$inverted-title-text-color: /*#F29224*/ #16607d;
 
 $background-color: #fdfdfd;
-$brand-color:      /*#2a7ae2*/ #F29224;
+$brand-color:      /*#2a7ae2*/ #F39325;
+$brand-color_2:      #4A607D;
+$brand-color_3:      #FFF2CF;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -52,6 +53,5 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "syntax-highlighting",
-        "compass"
+        "custom"
 ;
