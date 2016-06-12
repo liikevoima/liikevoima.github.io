@@ -10,5 +10,13 @@
 			</main>
       {% include footer.html %}
 		</div>
+    <script defer="defer"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script defer="defer"  src="/scripts/vendor/googleanalytics.js"></script>
+    <script defer="defer"  src="/scripts/script.js"></script>
+    <script type="text/javascript">
+      if (typeof jQuery == 'undefined') {
+          document.write(unescape("%3Cscript src='/scripts/vendor/jquery-1.11.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+      }
+    </script>
 	</body>
 </html>
