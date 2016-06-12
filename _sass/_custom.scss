@@ -35,7 +35,8 @@ main article {
 //   margin-top: 1em;
   h1  {
     font-weight: bold;
-    padding-right: 50px;
+    color: $brand-color_2;
+//     padding-right: 50px;
     time, >span {
       float: right;
       font-size: smaller;
@@ -51,7 +52,7 @@ main article {
       color: gray;
       
       bottom: -0.5em;
-      }
+    }
   }
   
   address {
@@ -67,7 +68,11 @@ main article {
     font-size: large;
   }
   &.right {
-  float: right;
+    float: right;
+    @include media-query($on-palm) {
+      float: left;
+      clear: left;
+    }
   }
 
   h2 {
@@ -156,9 +161,9 @@ ul li {
 }
 
 .gmap {
-  float: left;
-  margin: 1em 1em;
-  width: 80%;
+//   float: left;
+//   width: 80%;
+  margin-top: 1em;
 }
 
 

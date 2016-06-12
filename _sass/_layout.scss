@@ -52,7 +52,7 @@
       -moz-border-radius: 4px;
       border-radius: 4px;
       &:hover {
-          color: $brand-color;
+          color: snow;
           text-decoration: none;
       }
     }
@@ -73,15 +73,14 @@
     }
 
     .selected {
-          
-          background-color: white;
+        background-color: white;
+        color: black;
+        /*  -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          border-radius: 4px;*/
+        &:hover {
           color: black;
-          /*  -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            border-radius: 4px;*/
-          &:hover {
-            color: black;
-          }
+        }
     }
       
           
@@ -123,16 +122,29 @@
             display: block;
             padding-bottom: 5px;
         }
-
+        
+        a {
+          
+          &:hover {
+            color: $brand-color;
+          }
+        }
         .page-link {
             display: block;
             padding: 5px 10px;
-
+            color: grey;
             &:not(:last-child) {
                 margin-right: 0;
             }
             margin-left: 20px;
         }
+        .selected {
+          color: black;
+          &:hover {
+            color: black;
+          }
+    }
+
     }
 }
 
