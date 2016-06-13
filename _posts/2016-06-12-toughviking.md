@@ -1,7 +1,7 @@
 ---
 title: "Ilmoittaudu ToughViking-kisaan!"
 layout: post
-date: 2016-06-06
+date: 2016-06-12
 ---
 LiikeVoima lähtee ainakin yhdellä joukkueella Tukholmassa 27.8 järjestettävään [ToughViking -kisaan](http://toughviking.se).
 Jos olet kiinnostunut lähtemään mukaan, niin ilmianna itsesi [Vesalle](mailto:vesa@liikevoima.fi) tai [Anskulle](mailto:ansku@liikevoima.fi) **tämän viikon kuluessa**! Joukkueeseen mahtuu periaatteessa niin monta henkeä kuin on tulijoita,  mutta saattaa olla mielekkäämpää muodostaa useampia joukkueita. 
