@@ -183,18 +183,22 @@
     list-style: none;
     margin-left: 0;
     margin: 0;
+    li {
+      margin-bottom: 0.3em;
+    }
+
 }
 
 .social-media-list {
   list-style-type: none;
-
       li {
         float: left;   
-        padding-top: $small-font-size;
+        padding-top: $small-font-size / 2;
         margin-bottom: 0;
         position: relative;
         z-index: 10;
         margin: 0.3rem ;
+    
       }
     
 }
@@ -215,12 +219,9 @@
 }
     
 .footer-col-1 {
-    width: -webkit-calc(10% - (#{$spacing-unit} / 2));
-    width:         calc(10% - (#{$spacing-unit} / 2));
-    p {
-      font-size: 10px;
-    }
-
+    width: -webkit-calc(19% - (#{$spacing-unit} / 2));
+    width:         calc(19% - (#{$spacing-unit} / 2));
+    font-size: small; 
 }
 
 .footer-col-2 {
