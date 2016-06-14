@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
+  {% include head-frontpage.html %}
   <body>
 		{% include header.html %}
-		
-		  <div class="container">
-			<main>
-  			
-  			{% if page.url contains 'page' %} 
-          {% comment %}Do nothing - this is hacky way to ignore paginator pages appearing in menu {% endcomment %}
-        {% else %}
-        {% include slideshow.html %}
-        {% endif %}
-        <div class="row">
-  				<section class="eight columns blog">
-  					<div class="page-content">
-  							{{ content }}		
-  					</div>
-  				</section>
-  				<section class="four columns">
-  				{% include fbnews.html %}
-  				</section>
-        </div>
-			</main>
-			{% include footer.html %}
-		</div>
+		<main>
+			<div class="container">
+			{% if page.url contains 'page' %} 
+        {% comment %}Do nothing - this is hacky way to ignore paginator pages appearing in menu {% endcomment %}
+      {% else %}
+      {% include slideshow.html %}
+      {% endif %}
+			</div>
+      <div class="container row">
+				<section class="eight columns blog">
+					<div class="page-content">
+							{{ content }}		
+					</div>
+				</section>
+				<section class="four columns">
+				{% include fbnews.html %}
+				</section>
+      </div>
+		</main>
+		{% include footer.html %}
 	</body>
 </html>
