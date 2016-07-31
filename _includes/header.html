@@ -17,15 +17,20 @@
       </svg>
     </a>
     <div class="trigger">
-      {% for my_page in site.pages %}
-        {% if my_page.title %}
-        {% if my_page.url contains 'page' %} 
-        {% comment %}Do nothing - this is hacky way to ignore paginator pages appearing in menu {% endcomment %}
-        {% else %}
-         {% if my_page.url == page.url %}<a class="page-link selected" {% else %}<a class="page-link inactive" {% endif %}
-         href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-         {% endif %}
-         {% endif %}
+      {% for my_page in site.pages %}       
+        {% if my_page.title and my_page.notitle != true %}
+          {% if my_page.url contains 'page' %} 
+            {% comment %}Do nothing - this is hacky way to ignore paginator pages appearing in menu {% endcomment %}
+          {% else %}
+           {% if my_page.url == page.url %}<a class="page-link selected" {% else %}<a class="page-link inactive" {% endif %}
+           href="{{ my_page.url | prepend: site.baseurl }}">
+           {% if my_page.navtitle %}
+            {{ my_page.navtitle }}
+           {% else %}
+            {{ my_page.title }}
+           {% endif %}</a>
+          {% endif %}
+        {% endif %}
       {% endfor %}
     </div>
   </nav>
