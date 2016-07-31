@@ -451,8 +451,8 @@ div.buttons > * {
 }
 
 div#comments {
-    clear: left;
-    margin: 1em 0;
+    clear: both;
+    margin: 0 0;
     /* TODO min-height for an accurate layout sooner? */
 }
 
